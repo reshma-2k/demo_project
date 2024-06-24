@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SchoolManagementDb.Models.Motivation>
+
+@{
+    ViewBag.Title = "View Motivation";
+}
+
+<h2>View Motivation</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var motivation in Model)
+        {
+            <tr>
+                <td>@motivation.Title</td>
+                <td>@motivation.Content</td>
+            </tr>
+        }
+    </tbody>
+</table>

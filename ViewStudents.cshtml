@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SchoolManagementDb.Models.Student>
+
+@{
+    ViewBag.Title = "Students";
+}
+
+<h2>Students</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Class</th>
+            <th>Division</th>
+            <th>Educational Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Address</td>
+                <td>@student.Class</td>
+                <td>@student.Division</td>
+                <td>@student.EducationalStatus</td>
+            </tr>
+        }
+    </tbody>
+</table>
